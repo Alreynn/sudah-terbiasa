@@ -1,30 +1,25 @@
-# 💞 Ciee Mau Nge-Bucin yaa
-
-Pasti kalian datang dari Video TikTok [ini](https://vt.tiktok.com/ZSko23Mnh/) yaa
-<br />(atau engga juga gapapa si..)
+# 🎶 Lu Terngiang-Ngiang Sama Lagu Ini?
+Pasti lu kalo buka TikTok, kadang lewat video pake lagu ini dan videonya itu tentang JJ PTN atau nggak orang pamer bisa bikin kodingan yang sinkron sama lirik lagu ini.
 
 ---
 
 ## 🔧 Cara Install
 
-1. Pastikan Node.js sudah terinstal  
-   👉 [https://nodejs.org](https://nodejs.org)
+1. Pastikan Git sudah terinstal  
+   👉 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 2. Clone project ini:
 ```bash
-git clone https://github.com/USERNAME/kamu-cantik.git
-cd kamu-cantik
+git clone https://github.com/Alreynn/sudah-terbiasa.git
+cd sudah-terbiasa
 ```
 
-3. Install dependensi:
-```bash
-npm install
-```
+---
 
-4. Jalankan aplikasi:
-```bash
-npm run app
-```
+## ❓ Apa yang Beda Sama Upstream Repo?
+1. Lagu yang dipakai
+2. Sewaktu klik untuk diputar, ada lagunya
+3. Tidak memakai ElectronJS
 
 ---
 
@@ -33,15 +28,10 @@ npm run app
 ```
 .
 ├── public/
+│   ├── assets/           ← aset penting seperti icon, musik
+│   ├── fonts/
 │   ├── index.html        ← halaman utama (tampilan lirik)
-│   ├── style.css         ← style font
-│   └── images/           ← icon tombol (close, maximize, minimize)
-├── icon.ico              ← icon window
-├── main.js               ← file utama Electron
-├── server.js             ← server untuk render halaman
-├── start.js              ← script untuk jalankan server + Electron
-├── preload.js            ← untuk komunikasi aman antara UI & Electron
-├── package.json
+│   └── style.css         ← styling
 └── README.md
 ```
 
@@ -60,17 +50,5 @@ Silakan fork dan pull request jika kamu ingin:
 ## 🧙‍♂️ Developer
 
 Dibuat dengan 💕 oleh **Rajendra Verrill Hafizha**  
+Difork oleh **Alreynn**  
 Proyek ini bagian dari OMANIAOZANIA Productions ❤️
-
----
-
-## 📦 Build ke .exe (opsional)
-
-Untuk membuat versi `.exe`, gunakan:
-
-```bash
-npm install --save-dev electron-packager
-npx electron-packager . kamu-cantik --platform=win32 --arch=x64 --icon=icon.ico
-```
-
----
