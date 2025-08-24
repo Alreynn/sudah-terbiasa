@@ -30,8 +30,8 @@ cd sudah-terbiasa
 ├── public/
 │   ├── assets/           ← aset penting seperti icon, musik
 │   ├── fonts/
-│   ├── index.html        ← halaman utama (tampilan lirik)
 │   └── style.css         ← styling
+├── index.html            ← halaman utama (tampilan lirik)
 └── README.md
 ```
 

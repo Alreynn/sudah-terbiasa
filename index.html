@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Aduh Tante</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
     <header id="custom-title-bar">
         <div class="title">Sudah Terbiasa Terjadi Tante</div>
         <div id="window-controls">
-            <button id="home-btn"><img src="assets/home.png"></button>
+            <button id="home-btn"><img src="./public/assets/home.png"></button>
         </div>
     </header>
 
-    <audio id="audio" src="./assets/sound.mp3" preload="auto"></audio>
+    <audio id="audio" src="./public/assets/sound.mp3" preload="auto"></audio>
     <div id="lyrics"><span id="text">Klik di sini untuk mulai</span><span class="cursor">|</span></div>
 
     <script>
@@ -55,7 +57,7 @@
                     { delay: 1000, speed: 90 },
                     { delay: 1000, speed: 85 },
                     { delay: 1100, speed: 100 },
-                    { delay: 1000, speed: 115 }
+                    { delay: 1100, speed: 100 }
                 ];
     
                 let index = 0;
