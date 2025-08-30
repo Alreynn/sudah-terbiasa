@@ -13,7 +13,7 @@
         <div class="title">Sudah Terbiasa Terjadi Tante</div>
         <div id="window-controls">
             <button id="sound-btn"><img id="toggleSound" src="./public/assets/soundOn.png"></button>
-            <button id="loop-btn"><img src="./public/assets/loop.png"></button>
+            <button id="loop-btn"><img id="toggleLoop" src="./public/assets/loop.png"></button>
             <button id="home-btn"><img src="./public/assets/home.png"></button>
         </div>
     </header>
@@ -21,12 +21,15 @@
     <audio id="audio" src="./public/assets/sound.mp3" preload="auto"></audio>
     <div id="lyrics"><span id="text">Klik di sini untuk mulai</span><span class="cursor">|</span></div>
 
-    <script>
+    <script defer>
         document.getElementById('home-btn').addEventListener('click', () => {
             location.reload();
         });
+        
+        const toggleLoop = document.getElementById("toggleLoop");
         document.getElementById('loop-btn').addEventListener('click', () => {
-            audio.loop = true;
+            audio.loop = !audio.loop;
+            audio.loop ? toggleLoop.src = './public/assets/loopOn.png' : toggleLoop.src = './public/assets/loop.png';
         });
         
         const toggleSound = document.getElementById("toggleSound");
@@ -37,11 +40,9 @@
 
         const audio = document.getElementById("audio");
         
-        let isClicked = false;
         const lyricContainer = document.getElementById("lyrics");
         lyricContainer.addEventListener("click", () => {
-            if (isClicked === false) {
-                isClicked = true;
+            if (audio.currentTime === 0) {
                 audio.play();
 
                 const lyrics = [
@@ -59,9 +60,9 @@
                 //  Delay = Jeda antara object 1 dengan object 2
                 //  Speed = Cepatnya teks diketik
                     { delay: 550, speed: 95 },
-                    { delay: 1100, speed: 100 },
-                    { delay: 900, speed: 95 },
-                    { delay: 1400, speed: 100 },
+                    { delay: 900, speed: 110 },
+                    { delay: 700, speed: 95 },
+                    { delay: 1500, speed: 100 },
                     { delay: 900, speed: 90 },
                     { delay: 1100, speed: 85 },
                     { delay: 900, speed: 100 },
@@ -104,11 +105,10 @@
                 typeOut();
 
                 audio.addEventListener('waiting', () => {
-                    isClicked = true;
                     typeOut();
                 })
                 audio.addEventListener("ended", () => {
-                    isClicked = false;
+                    audio.currentTime = 0; // Atur currentTime audio jadi 0 biar bisa ditoggle sama if func.
                 })
             }
         })

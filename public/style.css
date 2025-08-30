@@ -39,7 +39,7 @@
     display: block;
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1); /* agar warna putih di atas pink */
+    filter: invert(1);
 }
 
 #window-controls button:hover img {
